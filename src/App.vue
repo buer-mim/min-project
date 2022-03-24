@@ -8,7 +8,7 @@
 export default {
     data(){
         return {
-            userName: `12123132`
+            userName: `123`
         };
     }
 };
