@@ -25,11 +25,13 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "commit-msg": "node script/verify-commit.js",
-      "pre-push": "npm test"
+      "commit-msg": "node script/verify-commit.js"
     }
   },
   "lint-staged": {
-    "src/**/*.js": "eslint"
+    "src/**/*.{js, vue}": [
+      "eslint --ext .js,.vue src",
+      "git add"
+    ]
   }
 }
