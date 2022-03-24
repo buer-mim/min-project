@@ -10,7 +10,6 @@ if (!commitRE.test(msg)) {
         )
         + `    ${chalk.green('feat: add \'comments\' option')}\n`
         + `    ${chalk.green('fix: handle events on blur (close #28)')}\n\n`
-        + chalk.blue('  请查看 git commit 提交规范：https://github.com/woai3c/Front-end-articles/blob/master/git%20commit%20style.md。\n')
     );
     process.exit(1);
 }
