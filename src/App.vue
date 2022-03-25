@@ -1,15 +1,29 @@
 <template>
     <div>
-        456
+        <ul>
+            <li v-for="item in list" :key="item.id">{{ item.name }}</li>
+        </ul>
     </div>
 </template>
 
 <script>
+import { getList } from './service/service';
 export default {
     data(){
         return {
-            userName: `123`
+            list: []
         };
+    },
+    mounted(){
+        this.getListEvent();
+    },
+    methods: {
+        // 获取列表
+        getListEvent(){
+            getList((res) => {
+                this.list = res;
+            });
+        }
     }
 };
 </script>

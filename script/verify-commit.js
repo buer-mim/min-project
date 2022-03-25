@@ -1,7 +1,7 @@
 const chalk = require('chalk');
 const msgPath = process.env.HUSKY_GIT_PARAMS;
 const msg = require('fs').readFileSync(msgPath, 'utf-8').trim();
-const commitRE = /^(feat|fix|chore|revert|release)(\(.+\))?: .{1,80}/;
+const commitRE = /^(feat|fix|pref|chore|revert|release)(\(.+\))?: .{1,80}/;
 
 if (!commitRE.test(msg)) {
     console.error(`${chalk.bgRed.white(' ERROR ')} ${chalk.red('不合法的 commit 消息格式')}\n\n`
